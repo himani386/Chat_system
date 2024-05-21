@@ -6,16 +6,27 @@
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .chat{
+        width:100%;
+        height:97%;
+        background-color: aqua;
+      }
+      .height{
+      height:100%;
+      }
+  
+    </style>
 </head>
 <body>
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100" style="height:9vh">
         <div class="flex-none">
           <button class="btn btn-square btn-ghost">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </button>
         </div>
         <div class="flex-1">
-          <a class="btn btn-ghost text-xl">daisyUI</a>
+          <a class="btn btn-ghost text-xl">Chats</a>
         </div>
         <div class="flex-none">
           <button class="btn btn-square btn-ghost">
@@ -23,19 +34,68 @@
           </button>
         </div>
       </div>
-      <div class="drawer lg:drawer-open">
-        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content flex flex-col items-center justify-center">
+      <div class="drawer lg:drawer-open " style="height:89vh">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle p-1"  />
+        <div class="drawer-content flex flex-col items-center justify-center " style="height:70vh">
           <!-- Page content here -->
+          <div class="chat">
+
+          </div >
           <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+          <div class="flex w-full">
+          <input type="text" name="text" required="" class="w-full height basis-5/6">
+          <button class="btn basis-1/6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+            Send
+          </button>
+        </div>
         
         </div> 
-        <div class="drawer-side">
+        <div class="drawer-side " style="height:90vh; overflow-y:scroll" >
           <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label> 
           <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
             <!-- Sidebar content here -->
-            <li><a>Sidebar Item 1</a></li>
-            <li><a>Sidebar Item 2</a></li>
+            <li><div class="card card-side bg-base-100 shadow-xl " style ="height: 100px;">
+              <figure style="height:70px;width:50px"><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+              <div class="card-body gap-0 p-0">
+                <h2 class="text-xl">VISHAL KUMAR SINGH</h2>
+               
+                <div class="card-actions justify-end">
+                  
+                </div>
+              </div>
+            </div></li>
+            <li><div class="card card-side bg-base-100 shadow-xl " style ="height: 100px;">
+              <figure style="height:70px;width:50px"><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+              <div class="card-body gap-0 p-0">
+                <h2 class="text-xl">HIMANI </h2>
+               
+                <div class="card-actions justify-end">
+                  
+                </div>
+              </div>
+            </div></li>
+            <li><div class="card card-side bg-base-100 shadow-xl " style ="height: 100px;">
+              <figure style="height:70px;width:50px"><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+              <div class="card-body gap-0 p-0">
+                <h2 class="text-xl">SNEHA</h2>
+               
+                <div class="card-actions justify-end">
+                  
+                </div>
+              </div>
+            </div></li>
+            <li><div class="card card-side bg-base-100 shadow-xl " style ="height: 100px;">
+              <figure style="height:70px;width:50px"><img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
+              <div class="card-body gap-0 p-0">
+                <h2 class="text-xl">RITIKA</h2>
+               
+                <div class="card-actions justify-end">
+                  
+                </div>
+              </div>
+            </div></li>
+            
           </ul>
         
         </div>

@@ -25,4 +25,5 @@ urlpatterns = [
      path('login' , login, name='login'),
      path('register',register, name='register'),
      path('dashboard',dashboard,name='dashboard'),
+     path('forgetpassword',forgetpassword, name='forgetpassword'),
 ]

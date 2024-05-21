@@ -1,4 +1,4 @@
-from django.shortcuts import render ,HttpResponse
+from django.shortcuts import render ,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 import re
@@ -20,6 +20,7 @@ def login(request):
         user = authenticate(username=email,password = password)
         if(user is not None):
             mess= "you have logged in successfully"
+            return redirect("dashboard")
         else:
             mess= "email and password are incorrect"
     
@@ -58,3 +59,9 @@ def register(request):
 
 def dashboard(request):
     return render(request , 'dashboard.html' , {})
+def forgetpassword(request):
+    if (request.method == 'GET'):
+        return render(request , 'forgetpassword.html' ,{})   
+    email = request.POST.get('email')
+
+    return render(request , 'forgetpassword.html' , {})
